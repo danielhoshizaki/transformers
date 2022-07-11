@@ -111,6 +111,7 @@ MODEL_MAPPING_NAMES = OrderedDict(
         ("roberta", "RobertaModel"),
         ("roformer", "RoFormerModel"),
         ("segformer", "SegformerModel"),
+        ("pvt", "PVTModel"),
         ("sew", "SEWModel"),
         ("sew-d", "SEWDModel"),
         ("speech_to_text", "Speech2TextModel"),
@@ -341,6 +342,7 @@ MODEL_FOR_IMAGE_CLASSIFICATION_MAPPING_NAMES = OrderedDict(
         ("regnet", "RegNetForImageClassification"),
         ("resnet", "ResNetForImageClassification"),
         ("segformer", "SegformerForImageClassification"),
+        ("pvt", "PVTForImageClassification"),
         ("swin", "SwinForImageClassification"),
         ("van", "VanForImageClassification"),
         ("vit", "ViTForImageClassification"),
@@ -363,6 +365,7 @@ MODEL_FOR_SEMANTIC_SEGMENTATION_MAPPING_NAMES = OrderedDict(
         ("dpt", "DPTForSemanticSegmentation"),
         ("mobilevit", "MobileViTForSemanticSegmentation"),
         ("segformer", "SegformerForSemanticSegmentation"),
+        ("pvt", "PVTForSemanticSegmentation"),
     ]
 )
 

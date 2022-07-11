@@ -117,6 +117,7 @@ from . import (
     roberta,
     roformer,
     segformer,
+    pvt,
     sew,
     sew_d,
     speech_encoder_decoder,

@@ -289,6 +289,7 @@ _import_structure = {
     "models.roberta": ["ROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP", "RobertaConfig", "RobertaTokenizer"],
     "models.roformer": ["ROFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP", "RoFormerConfig", "RoFormerTokenizer"],
     "models.segformer": ["SEGFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP", "SegformerConfig"],
+    "models.pvt": ["PVT_PRETRAINED_CONFIG_ARCHIVE_MAP", "PVTConfig"],
     "models.sew": ["SEW_PRETRAINED_CONFIG_ARCHIVE_MAP", "SEWConfig"],
     "models.sew_d": ["SEW_D_PRETRAINED_CONFIG_ARCHIVE_MAP", "SEWDConfig"],
     "models.speech_encoder_decoder": ["SpeechEncoderDecoderConfig"],
@@ -1668,6 +1669,17 @@ else:
             "SegformerPreTrainedModel",
         ]
     )
+    _import_structure["models.pvt"].extend(
+        [
+            "PVT_PRETRAINED_MODEL_ARCHIVE_LIST",
+            "PVTDecodeHead",
+            "PVTForImageClassification",
+            "PVTForSemanticSegmentation",
+            "PVTLayer",
+            "PVTModel",
+            "PVTPreTrainedModel",
+        ]
+    )
     _import_structure["models.sew"].extend(
         [
             "SEW_PRETRAINED_MODEL_ARCHIVE_LIST",
@@ -3005,6 +3017,7 @@ if TYPE_CHECKING:
     from .models.roberta import ROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP, RobertaConfig, RobertaTokenizer
     from .models.roformer import ROFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP, RoFormerConfig, RoFormerTokenizer
     from .models.segformer import SEGFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP, SegformerConfig
+    from .models.pvt import PVT_PRETRAINED_CONFIG_ARCHIVE_MAP, PVTConfig
     from .models.sew import SEW_PRETRAINED_CONFIG_ARCHIVE_MAP, SEWConfig
     from .models.sew_d import SEW_D_PRETRAINED_CONFIG_ARCHIVE_MAP, SEWDConfig
     from .models.speech_encoder_decoder import SpeechEncoderDecoderConfig
@@ -4149,6 +4162,15 @@ if TYPE_CHECKING:
             SegformerLayer,
             SegformerModel,
             SegformerPreTrainedModel,
+        )
+        from .models.pvt import (
+            PVT_PRETRAINED_MODEL_ARCHIVE_LIST,
+            PVTDecodeHead,
+            PVTForImageClassification,
+            PVTForSemanticSegmentation,
+            PVTLayer,
+            PVTModel,
+            PVTPreTrainedModel,
         )
         from .models.sew import (
             SEW_PRETRAINED_MODEL_ARCHIVE_LIST,
